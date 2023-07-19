@@ -5,6 +5,45 @@
     --card-color: #F0EBE8;
 }
 
+.CardContainer {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    background-color: var(--card-color);
+    background-image: url("../images/card.jpg");
+    border-radius: 0.5rem;
+    box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.69);
+    top:50%;
+}
+
+.CardContainer .CardBorder {
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 0.5rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0.25rem;
+    border-color: var(--accent-color);
+    border-width: 0.25rem;
+}
+
+.CardContainer .CardContainerInner {
+    box-sizing: border-box;
+    padding: 3rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction:column;
+    justify-content:space-between;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
 .NavBar {
     display: inline-flex;
     align-items: flex-start;
@@ -25,12 +64,6 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-}
-
-.Heading {
-    font-weight: normal;
-    font-size: 5.5rem;
-    color: var(--text-color);
 }
 
 #NameTag{
@@ -71,48 +104,21 @@
     .CardContainer {
         min-height: 35rem;
         position: absolute;
-        box-sizing: border-box;
-        justify-content: center;
-        align-items: flex-start;
-        display: flex;
-        background-color: var(--card-color);
-        background-image: url("../images/card.jpg");
-        top: 5%;
-        bottom: 5%;
+        top:5%;
+        bottom:5%;
         left: 5%;
         right: 5%;
-        border-radius: 0.5rem;
-        box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.69);
     }
     
     .CardContainer .CardBorder {
         position: absolute;
-        box-sizing: border-box;
-        border-style: solid;
-        border-radius: 0.5rem;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0.25rem;
-        border-color: var(--accent-color);
-        border-width: 0.25rem;
     }
     
     .CardContainer .CardContainerInner {
-        box-sizing: border-box;
         height:inherit;
-        padding: 3rem;
-        display: flex;
         position: absolute;
-        align-items: flex-start;
-        flex-direction:column;
-        justify-content:space-between;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
     }
+
 }
 
 @media screen and (max-width: 899px) {
@@ -143,47 +149,53 @@
     }
 
     .CardContainer {
-        box-sizing: border-box;
-        justify-content: center;
-        align-items: flex-start;
-        display: flex;
-        background-color: var(--card-color);
-        background-image: url("../images/card.jpg");
         margin:5%;
-        border-radius: 0.5rem;
-        box-shadow: 1rem 1rem 1rem rgba(0,0,0,0.69);
+    }
+}
+
+@media screen and (max-width: 499px) {
+    body {
+        font-size: 1rem;
+        font-family: Courier, monospace;
     }
 
-    .CardContainer .CardBorder {
-        box-sizing: border-box;
-        border-style: solid;
-        border-radius: 0.5rem;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0.25rem;
-        border-color: var(--accent-color);
-        border-width: 0.25rem;
+    .Heading {
+        font-weight: normal;
+        font-size: 3rem;
+        color: var(--text-color);
     }
 
     .CardContainer .CardContainerInner {
-        box-sizing: border-box;
-        padding: 3rem;
-        display: flex;
-        align-items: flex-start;
-        flex-direction:column;
-        justify-content:space-between;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        padding: 1.5rem;
+    }
+
+    #Socials svg {
+        width: 2rem;
+        height: 2rem;
     }
 }
 
-body {
-    font-size: 1.5rem;
-    font-family: Courier, monospace;
+@media screen and (min-width: 500px) {
+    body {
+        font-size: 1.5rem;
+        font-family: Courier, monospace;
+    }
+
+    .Heading {
+        font-weight: normal;
+        font-size: 5.5rem;
+        color: var(--text-color);
+    }
+
+    .CardContainer .CardContainerInner {
+        padding: 3rem;
+    }
+
+    #Socials svg {
+        width: 4rem;
+        height: 4rem;
+    }
 }
+
 
 
