@@ -8,6 +8,7 @@
 .CardContainer {
 
     position: absolute;
+    overflow: auto;
     box-sizing: border-box;
     justify-content: center;
     align-items: flex-start;
@@ -24,6 +25,7 @@
 
 .CardContainer .CardBorder {
     position: absolute;
+    overflow:auto;
     box-sizing: border-box;
     border-style: solid;
     border-radius: 0.5rem;
@@ -38,6 +40,7 @@
 
 .CardContainer .CardContainerInner {
     box-sizing: border-box;
+    /* overflow: auto; */
     height:inherit;
     padding: 3rem;
     display: flex;
@@ -63,14 +66,7 @@
     color: var(--text-color);
 }
 
-.Footer {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 #Socials {
     position: relative;
@@ -102,14 +98,51 @@
     width: 100%;
 }
 
-.Content {
-    display: inline-grid;
-    grid-template-columns: auto,auto;
+@media screen and (min-width: 900px) {
+    .Content {
+        display: inline-grid;
+        grid-template-columns: auto,auto;
+    }
+    #AboutMe {
+        grid-column: 2;
+        margin-left: 20%;
+    }
+    .Footer {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-#AboutMe {
-    grid-column: 2;
-    margin-left: 20%;
+@media screen and (max-width: 899px) {
+    .Content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction:column;
+        justify-content:space-between;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    #AboutMe {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    .Footer {
+        display: flex;
+        align-items: flex-start;
+        flex-direction:column;
+        justify-content:space-between;
+        gap:1rem;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 body {
